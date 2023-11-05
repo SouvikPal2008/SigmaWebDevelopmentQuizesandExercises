@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 5</title>
     <style>
+        bodY{
+            padding: 0;
+            margin: 0;
+        }
         .navbar {
             overflow: hidden;
             background-color: whitesmoke;
@@ -16,7 +20,7 @@
             box-shadow: -2px 6px 31px black;
         }
 
-        .navbar li {
+        .navbar a li {
             float: left;
             display: block;
             color: rgb(24, 24, 24);
@@ -48,13 +52,13 @@
 
         #container1 {
             margin-left: 17vw;
-            min-height: 230px;
+            min-height: 320px;
             min-width: 230px;
         }
 
         #container2 {
             margin-right: 17vw;
-            min-height: 230px;
+            min-height: 320px;
             min-width: 230px;
         }
 
@@ -90,16 +94,65 @@
             box-sizing: border-box;
             border: 5px solid rgb(145, 138, 138);
         }
+        #navid{
+            box-shadow: 20px 1px 25px black;
+        }
+        .crash{
+            display: none;
+        }
+        @media only screen and (max-width:703px){
+            #container1, #container2{
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+        }
+        @media only screen and (max-width:426px){
+            #navid{
+                height:10vh
+            }
+            #container1{
+                margin-top: 80px;
+            }
+        }
+        @media only screen and (max-width:230px){
+            .logo, .sigma, header, .absolute, footer{
+                display: none;
+            }
+            .crash{
+                display: block;
+            }
+        }
+        @media only screen and (max-height:388px){
+            .logo, .sigma, header, .absolute, footer{
+                display: none;
+            }
+            .crash{
+                display: block;
+            }
+        }
+        @media only screen and (max-width:1004px) and (max-height:738px){
+            .container{
+                font-size: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <li>Home</li>
-            <li>Programms</li>
-            <li>About Harry Bhai</li>
-            <li>About Me</li>
+        <nav class="navbar" id="navid">
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="index.html">
+                <li>Programms</li>
+            </a>
+            <a href="index.html">
+                <li>About Harry Bhai</li>
+            </a>
+            <a href="index.html">
+                <li>About Me</li>
+            </a>
         </nav>
     </header>
     <div class="absolute">
@@ -123,7 +176,7 @@
         </main>
     </div>
     <div class="logo">
-        <img src="https://rb.gy/21mvv0" alt="image" id="logo">
+        <img src="https://rb.gy/21mvv0" srcset="img.jpg" alt="image" id="logo">
     </div>
     <div class="sigma">
         <pre>Welcome to Sigma Web Development Express. Sigma batch OP ❤</pre>
@@ -134,6 +187,7 @@
             Watch This Anytime Please Give My Comment a Heart.
         </div>
     </footer>
+    <div class="crash" style="font-family:'Courier New', Courier, monospace">You Can't View This Webpage With This Device. Please Change Your Device to view</div>
 </body>
 
 </html>
